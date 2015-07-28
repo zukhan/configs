@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<root>
+    <appdef>
+        <appname>WEBSTORM</appname>
+        <prefix>com.jetbrains.WebStorm</prefix>
+    </appdef> 
+
+    <replacementdef>
+        <replacementname>MY_IGNORE_APPS</replacementname>
+        <replacementvalue>WEBSTORM, TERMINAL, ECLIPSE</replacementvalue>
+    </replacementdef>
+
+    <replacementdef>
+        <replacementname>MY_IGNORE_APPS_APPENIDX</replacementname>
+        <replacementvalue>(Except in WebStorm, Terminal, Eclipse)</replacementvalue>
+    </replacementdef>
+
+    <item>
+        <name>shift and curly brace</name>
+        <identifier>private.shift.curly.brace</identifier>
+        <autogen>
+            --KeyOverlaidModifier-- 
+            KeyCode::SHIFT_L, ModifierFlag::SHIFT_L,
+            KeyCode::SHIFT_L, 
+            KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_R
+        </autogen>
+        <autogen>
+            --KeyOverlaidModifier-- 
+            KeyCode::SHIFT_R, ModifierFlag::SHIFT_R,
+            KeyCode::SHIFT_R, 
+            KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>home key is cmd+alt</name>
+        <identifier>private.highlight.word</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::HOME,
+            
+            KeyCode::CONTROL_L,
+            ModifierFlag::OPTION_L
+        </autogen>
+    </item> 
+    <item>
+        <name>F8 is shift+ctrl</name>
+        <identifier>private.switch.tabs</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::F8,
+            
+            KeyCode::CONTROL_L,
+            ModifierFlag::SHIFT_L
+        </autogen>
+    </item> 
+</root>
+
