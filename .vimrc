@@ -7,13 +7,6 @@
 " Set mapleader
 let mapleader=","
 
-" Imports:
-source ~/.vim/plugins/python.vim
-
-" Load Pathogen
-filetype off
-execute pathogen#infect()
-
 " Use vim settings rather than vi settings.
 set nocompatible
 
@@ -57,26 +50,3 @@ set expandtab
 
 " Useful for copy pasting from clipboard
 set pastetoggle=<c-p>
-
-" Mapping for various plugins
-nnoremap <c-t> :NERDTree<CR>
-nnoremap <c-f> :GundoToggle<CR>
-
-
-" (BEGIN) This will quit vim if nerdtree is the only buffer left
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
-function! s:CloseIfOnlyNerdTreeLeft()
-  if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-endfunction
-
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-" (END)
