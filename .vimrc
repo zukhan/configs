@@ -39,7 +39,7 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 " Automatically add closing brace
-inoremap { {<CR>}<Esc>ko
+"inoremap { {<CR>}<Esc>ko
 
 " Go to the first non-whitespace character in a line
 imap <C-0> ^
@@ -50,3 +50,8 @@ set expandtab
 
 " Useful for copy pasting from clipboard
 set pastetoggle=<c-p>
+
+" Change cursor shape in normal/insert mode
+
+
+execute pathogen#infect()
